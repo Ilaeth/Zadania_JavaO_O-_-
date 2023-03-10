@@ -1,37 +1,40 @@
 import devices.Car;
+import devices.Phone;
 
 import java.time.LocalTime;
 
 public class Human {
     public String firstName;
     public String lastName;
-    protected String phone;
+    public String phonenumber;
     public Animal pet;
-    private Car car;
-    private Double salary;
+    public Car car;
+    public Phone phone;
+    public Double cash;
 
-    public Human(String firstName, String lastName, String phone, Animal pet, Car car){
+    public Human(String firstName, String lastName, String phonenumber){
         this.firstName = firstName;
         this.lastName = lastName;
-        this.phone = phone;
+        this.phonenumber = phonenumber;
         this.pet = pet;
         this.car = car;
+        this.cash = cash;
     }
 
     public Double getterSalary() {
         System.out.println(LocalTime.now());
-        System.out.println(salary);
-        return salary;
+        System.out.println(cash);
+        return cash;
     }
 
-    public void setterSalary(double salary) {
-        if (salary < 0)
+    public void setterSalary(double cash) {
+        if (cash < 0)
             System.out.println("Wynagrodzenie mniejsze niż zero");
         else {
             System.out.println("Nowe dane zostały wysłane do systemu księgowego.");
             System.out.println("Nie zapomnij odebrać aneksu do umowy od pani Hani z kadr.");
             System.out.println("Zus i US już wiedzą o zmianie wypłaty.");
-            this.salary = salary;
+            this.cash = cash;
         }
     }
 
@@ -57,8 +60,8 @@ public class Human {
                 ", lastName='" + lastName + '\'' +
                 ", pet=" + pet +
                 ", car=" + car +
-                ", phone='" + phone + '\'' +
-                ", salary=" + salary +
+                ", phone='" + phonenumber + '\'' +
+                ", cash=" + cash +
                 '}';
     }
 }
