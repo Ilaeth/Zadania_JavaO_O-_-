@@ -21,4 +21,15 @@ public class Human {
         System.out.println(salary);
         return salary;
     }
+
+    public void setterSalary(double salary) {
+        if (salary < 0)
+            System.out.println("Wynagrodzenie mniejsze niż zero");
+        else {
+            System.out.println("Nowe dane zostały wysłane do systemu księgowego.");
+            System.out.println("Nie zapomnij odebrać aneksu do umowy od pani Hani z kadr.");
+            System.out.println("Zus i US już wiedzą o zmianie wypłaty.");
+            this.salary = salary;
+        }
+    }
 }

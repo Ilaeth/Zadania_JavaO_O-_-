@@ -24,6 +24,9 @@ public class Main {
         cat.takeForAWalk();
 
         me.getterSalary();
+        me.setterSalary(-50000);
+        me.getterSalary();
+        me.setterSalary(50000);
         me.getterSalary();
     }
 }
