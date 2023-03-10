@@ -1,8 +1,10 @@
+package creatures;
+
 import java.io.File;
 
-public class Animal implements Salleable {
+public abstract class Animal implements Feedable {
     final public String species;
-    private Double weight;
+    protected Double weight;
     public String name;
     public File pic;
 
@@ -23,7 +25,7 @@ public class Animal implements Salleable {
         }
     }
 
-    void feed(){
+    public void feed() {
         if (weight > 0) {
             weight += 1;
             System.out.print("Thx for food.\n");
@@ -31,7 +33,7 @@ public class Animal implements Salleable {
             System.out.print("Pet died.\n");
     }
 
-    void takeForAWalk() {
+    public void takeForAWalk() {
         if (weight > 0) {
             weight -= 1;
             System.out.print("Thx for walk.\n");
@@ -41,7 +43,7 @@ public class Animal implements Salleable {
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "creatures.Animal{" +
                 "species='" + species + '\'' +
                 ", name='" + name + '\'' +
                 ", pic=" + pic +
@@ -49,18 +51,18 @@ public class Animal implements Salleable {
                 '}';
     }
 
-    @Override
-    public void sell(Human seller, Human buyer, Double price) {
-        if (seller.pet != this) {
-            System.out.println(("Nie udana tranzakcja, brak towaru."));
-        } else if (buyer.cash < price) {
-            System.out.println(("Nie udana tranzakcja, brak środków."));
-        } else {
-            seller.cash += price;
-            buyer.cash -= price;
-            buyer.pet = seller.pet;
-            seller.pet = null;
-            System.out.println(("Udana tranzakcja, sprzedano " + this + " za " + price));
-        }
-    }
+//    @Override
+//    public void sell(Human seller, Human buyer, Double price) {
+//        if (seller.pet != this) {
+//            System.out.println(("Nie udana tranzakcja, brak towaru."));
+//        } else if (buyer.cash < price) {
+//            System.out.println(("Nie udana tranzakcja, brak środków."));
+//        } else {
+//            seller.cash += price;
+//            buyer.cash -= price;
+//            buyer.pet = seller.pet;
+//            seller.pet = null;
+//            System.out.println(("Udana tranzakcja, sprzedano " + this + " za " + price));
+//        }
+//    }
 }

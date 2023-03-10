@@ -1,3 +1,5 @@
+import creatures.Animal;
+import creatures.Pet;
 import devices.Car;
 import devices.Phone;
 
@@ -5,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Phone samsung = new Phone("Samsung", "S10", 2020, 6.1, "android");
 
-        Animal cat = new Animal("cat", "Jinx");
+        Pet cat = new Pet("cat", "Jinx");
 
         Car bmw = new Car("x3", "bmw", 2012, 45000.00);
         Car bmw2 = new Car("5", "bmw", 2014, 100000.00);
@@ -14,7 +16,7 @@ public class Main {
         Human me = new Human("Przemek", "Podlecki", "123456789");
         Human girl = new Human("Maria", "Ino", "321432542");
 
-        Animal dog = new Animal("dog", "Hawana");
+        Pet dog = new Pet("dog", "Hawana");
 
         System.out.println(dog.name);
 
@@ -45,9 +47,9 @@ public class Main {
         me.pet = cat;
         me.cash = 1175.0;
         girl.cash = 150.0;
-        me.pet.sell(me, girl, 100.0);
-        me.pet = dog;
-        me.pet.sell(me, girl, 100.0);
+//        me.pet.sell(me, girl, 100.0);
+//        me.pet = dog;
+//        me.pet.sell(me, girl, 100.0);
 //        me.car.sell(me, girl, 24000.0);
 //        girl.phone = samsung;
 //        girl.phone.sell(girl, me, 1000.0);
