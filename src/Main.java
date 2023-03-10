@@ -1,24 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-        Animal dog = new Animal();
-        dog.species = "dog";
-        dog.name = "Hawana";
-        dog.weight = 50.0;
+        Phone samsung = new Phone("Samsung", "S10", 6.1, "android");
 
-        Animal cat = new Animal();
-        cat.species = "cat";
-        cat.name = "Jinx";
-        cat.weight = 5.0;
+        Animal cat = new Animal("cat", "Jinx");
 
-        Phone samsung = new Phone();
-        samsung.screenSize = 6.1;
-        samsung.producer = "Samsung";
-        samsung.model = "S10";
-        samsung.operationSystem = "android";
+        Human me = new Human("Przemek", "Podlecki", "123456789", cat);
 
-        Human me = new Human();
-        me.firstName = "Przemek";
-        me.lastName = "Podlecki";
-        me.phone = "Samsung S10";
+        Animal dog = new Animal("dog", "Hawana");
+
+        System.out.println(dog.name);
+        dog.feed();
+        dog.feed();
+        dog.takeForAWalk();
+
+        System.out.println(cat.name);
+        cat.takeForAWalk();
+        cat.takeForAWalk();
+        cat.takeForAWalk();
+        cat.takeForAWalk();
+        cat.takeForAWalk();
+        cat.takeForAWalk();
     }
 }
