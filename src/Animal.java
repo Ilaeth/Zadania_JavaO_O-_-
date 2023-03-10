@@ -38,4 +38,14 @@ public class Animal {
         } else
             System.out.print("Pet died.\n");
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "species='" + species + '\'' +
+                ", name='" + name + '\'' +
+                ", pic=" + pic +
+                ", weight=" + weight +
+                '}';
+    }
 }

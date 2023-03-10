@@ -1,3 +1,6 @@
+import devices.Car;
+import devices.Phone;
+
 public class Main {
     public static void main(String[] args) {
         Phone samsung = new Phone("Samsung", "S10", 6.1, "android");
@@ -36,5 +39,12 @@ public class Main {
         me.setterCar(bmw2);
         System.out.println(me.getterCar());
         me.setterCar(audi);
+
+        System.out.println(new Car("x3", "bmw", 45000.00).equals(new Car("5", "bmw", 100000.00)));
+        System.out.println(bmw2.equals(bmw));
+        System.out.println(bmw2);
+        System.out.println(me);
+        System.out.println(dog);
+        System.out.println(samsung);
     }
 }
