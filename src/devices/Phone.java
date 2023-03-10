@@ -1,12 +1,13 @@
 package devices;
 
-public class Phone {
+public class Phone extends Device {
     final public String producer;
     final public String model;
     final public Double screenSize;
     final public String operationSystem;
 
-    public Phone(String producer, String model, Double screenSize, String operationSystem) {
+    public Phone(String model, String producer, Integer yearofproduction, Double screenSize, String operationSystem) {
+        super(model, producer, yearofproduction);
         this.producer = producer;
         this.model = model;
         this.screenSize = screenSize;
@@ -14,12 +15,7 @@ public class Phone {
     }
 
     @Override
-    public String toString() {
-        return "Phone{" +
-                "producer='" + producer + '\'' +
-                ", model='" + model + '\'' +
-                ", screenSize=" + screenSize +
-                ", operationSystem='" + operationSystem + '\'' +
-                '}';
+    public void turnOn() {
+        System.out.println("Przesuń ekran palcem, aby odblokować");
     }
 }
