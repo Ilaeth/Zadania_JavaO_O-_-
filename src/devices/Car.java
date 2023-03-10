@@ -1,6 +1,6 @@
 package devices;
 
-public class Car extends Device {
+public abstract class Car extends Device {
     public final String model;
     public final String producer;
     public String color;
@@ -12,6 +12,8 @@ public class Car extends Device {
         this.producer = producer;
         this.value = value;
     }
+
+    public abstract void refuel();
 
     @Override
     public void turnOn() {
