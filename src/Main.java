@@ -4,7 +4,9 @@ public class Main {
 
         Animal cat = new Animal("cat", "Jinx");
 
-        Human me = new Human("Przemek", "Podlecki", "123456789", cat);
+        Car bmw = new Car("x3", "bmw");
+
+        Human me = new Human("Przemek", "Podlecki", "123456789", cat, bmw);
 
         Animal dog = new Animal("dog", "Hawana");
 
