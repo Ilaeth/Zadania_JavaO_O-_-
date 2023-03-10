@@ -14,13 +14,15 @@ public class Phone extends Device {
     String version;
     String serverAddress;
     String protocol;
+    public Double value;
 
-    public Phone(String model, String producer, Integer yearofproduction, Double screenSize, String operationSystem) {
-        super(model, producer, yearofproduction);
+    public Phone(String model, String producer, Integer yearofproduction, Double screenSize, String operationSystem, Double value) {
+        super(model, producer, yearofproduction, value);
         this.producer = producer;
         this.model = model;
         this.screenSize = screenSize;
         this.operationSystem = operationSystem;
+        this.value = value;
     }
 
     public void installAnnApp(String nameApp, String version, String serverAdress) throws MalformedURLException {

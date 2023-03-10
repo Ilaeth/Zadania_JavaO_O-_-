@@ -1,13 +1,13 @@
 package devices;
 
-public abstract class Car extends Device {
+public abstract class Car extends Device implements Comparable<Car> {
     public final String model;
     public final String producer;
     public String color;
     public Double value;
 
     public Car(String model, String producer, Integer yearofproduction, Double value) {
-        super(model, producer, yearofproduction);
+        super(model, producer, yearofproduction, value);
         this.model = model;
         this.producer = producer;
         this.value = value;
@@ -34,4 +34,9 @@ public abstract class Car extends Device {
 //            System.out.println(("Udana tranzakcja, sprzedano " + this + " za " + price));
 //        }
 //    }
+
+    @Override
+    public int compareTo(Car car) {
+        return this.yearofproduction - car.yearofproduction;
+    }
 }

@@ -10,7 +10,7 @@ import java.net.MalformedURLException;
 
 public class Main {
     public static void main(String[] args) throws MalformedURLException {
-        Phone samsung = new Phone("Samsung", "S10", 2020, 6.1, "android");
+        Phone samsung = new Phone("Samsung", "S10", 2020, 6.1, "android", 3000.00);
 
         Pet cat = new Pet("cat", "Jinx");
 
@@ -18,8 +18,8 @@ public class Main {
         Electric bmw2 = new Electric("5", "bmw", 2014, 100000.00);
         LPG audi = new LPG("4", "audi", 2019, 700000.00);
 
-        Human me = new Human("Przemek", "Podlecki", "123456789");
-        Human girl = new Human("Maria", "Ino", "321432542");
+        Human me = new Human("Przemek", "Podlecki", "123456789", 2);
+        Human girl = new Human("Maria", "Ino", "321432542", 2);
 
         Pet dog = new Pet("dog", "Hawana");
 
@@ -33,9 +33,9 @@ public class Main {
         me.getterSalary();
 
         me.setterCar(bmw);
-        System.out.println(me.getterCar());
+        System.out.println(me.getterCar(1));
         me.setterCar(bmw2);
-        System.out.println(me.getterCar());
+        System.out.println(me.getterCar(1));
         me.setterCar(audi);
 
         System.out.println(new Diesel("x3", "bmw", 2012, 45000.00).equals(new Electric("5", "bmw", 2014, 100000.00)));
@@ -64,5 +64,11 @@ public class Main {
         audi.refuel();
 
         samsung.installAnnApp("gra", "2","0");
+
+        me.garage[1] = bmw2;
+        me.garage[0] = audi;
+        System.out.println(me.getGarageValue());
+        me.printGarage();
+        me.sortGarage();
     }
 }
